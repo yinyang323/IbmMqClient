@@ -16,23 +16,24 @@
     <dependencies></dependencies>
   </metadata>
   <files>
-	<file src="bin\ibm_mq\com.ibm.mq.allclient-9.0.4.0.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.AWT.WinForms.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Beans.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Charsets.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Corba.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Core.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Management.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Media.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Misc.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Naming.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Remoting.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Security.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.SwingAWT.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Text.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.Util.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.OpenJDK.XML.API.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.Runtime.dll" target="lib\net20" />
-	<file src="bin\ikvm\IKVM.Runtime.JNI.dll" target="lib\net20" />
+	<file src="_bin\ibm_mq\com.ibm.mq.allclient-9.0.4.0.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.AWT.WinForms.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Beans.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Charsets.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Corba.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Core.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Management.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Media.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Misc.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Naming.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Remoting.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Security.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.SwingAWT.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Text.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.Util.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.OpenJDK.XML.API.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.Runtime.dll" target="lib\net20" />
+	<file src="_bin\ikvm\IKVM.Runtime.JNI.dll" target="lib\net20" />
+
   </files>  
 </package>
