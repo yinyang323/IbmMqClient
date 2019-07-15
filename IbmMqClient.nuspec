@@ -7,10 +7,12 @@
     <authors>Leonid Salavatov</authors>
     <owners>Leonid Salavatov</owners>   
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>IBM MQ standalone client for .NET</description>
+    <description>IBM MQ standalone client for .NET 
+(wrapped official java client v9.0 with java virtual machine - ikvm.net)
+</description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright 2019 (c) Leonid Salavatov</copyright>
-    <tags>ibm mq jms xms client standalone dotnet csharp c# .net</tags>
+    <copyright></copyright>
+    <tags>ibm mq jms xms client standalone dotnet csharp c# .net ikvm</tags>
     <projectUrl>https://github.com/mustaddon/IbmMqClient</projectUrl>
     <repository type="git" url="https://github.com/mustaddon/IbmMqClient" />
     <dependencies></dependencies>
@@ -34,6 +36,5 @@
 	<file src="_bin\ikvm\IKVM.OpenJDK.XML.API.dll" target="lib\net20" />
 	<file src="_bin\ikvm\IKVM.Runtime.dll" target="lib\net20" />
 	<file src="_bin\ikvm\IKVM.Runtime.JNI.dll" target="lib\net20" />
-
   </files>  
 </package>
