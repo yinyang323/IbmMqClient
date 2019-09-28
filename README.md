@@ -18,21 +18,10 @@ cf.setStringProperty(CommonConstants.__Fields.WMQ_QUEUE_MANAGER, "EXAMPLE_QUEUE_
 cf.setStringProperty(CommonConstants.__Fields.WMQ_APPLICATIONNAME, "JMS EXAMPLE");
 cf.setStringProperty(CommonConstants.USERID, "EXAMPLE_USER");
 
-var connection = cf.createConnection();
-var session = connection.createSession(false, javax.jms.Session.__Fields.AUTO_ACKNOWLEDGE);
-var queue = session.createQueue("queue:///EXAMPLE_QUEUE_NAME");
-var producer = session.createProducer(queue);
-
-var msg = session.createTextMessage();
-msg.setStringProperty("JMSXGroupID", Guid.NewGuid().ToString());
-msg.setIntProperty("JMSXGroupSeq", 1);
-msg.setBooleanProperty("JMS_IBM_Last_Msg_In_Group", true);
-msg.setText("Hello World");
-
-connection.start();
-producer.send(msg);
-
-producer.close();
-session.close();
-connection.close();
+using (var context = cf.createContext())
+{
+    var queue = context.createQueue("queue:///EXAMPLE_QUEUE_NAME");
+    var producer = context.createProducer();
+    producer.send(queue, "Hello World");
+}
 ```
