@@ -76,43 +76,5 @@ namespace IbmMqClient
 
             return cf;
         }
-
-        static void Test()
-        {
-            var ff = JmsFactoryFactory.getInstance(JmsConstants.__Fields.WMQ_PROVIDER);
-            var cf = ff.createConnectionFactory();
-
-            cf.setIntProperty(CommonConstants.__Fields.WMQ_CONNECTION_MODE, CommonConstants.__Fields.WMQ_CM_CLIENT);
-            cf.setStringProperty(CommonConstants.__Fields.WMQ_HOST_NAME, HOST);
-            cf.setIntProperty(CommonConstants.__Fields.WMQ_PORT, int.Parse(PORT));
-            cf.setStringProperty(CommonConstants.__Fields.WMQ_CHANNEL, CHANNEL);
-            cf.setStringProperty(CommonConstants.__Fields.WMQ_QUEUE_MANAGER, QMGR);
-            cf.setStringProperty(CommonConstants.__Fields.WMQ_APPLICATIONNAME, "Test JMS");
-            cf.setStringProperty(CommonConstants.USERID, APP_USER);
-
-            if (!string.IsNullOrEmpty(APP_PASSWORD))
-            {
-                cf.setBooleanProperty(CommonConstants.USER_AUTHENTICATION_MQCSP, true);
-                cf.setStringProperty(CommonConstants.PASSWORD, APP_PASSWORD);
-            }
-
-            var connection = cf.createConnection();
-            var session = connection.createSession(false, javax.jms.Session.__Fields.AUTO_ACKNOWLEDGE);
-            var queue = session.createQueue("queue:///" + QUEUE_NAME);
-            var producer = session.createProducer(queue);
-
-            var msg = session.createTextMessage();
-            msg.setStringProperty("JMSXGroupID", Guid.NewGuid().ToString());
-            msg.setIntProperty("JMSXGroupSeq", 1);
-            msg.setBooleanProperty("JMS_IBM_Last_Msg_In_Group", true);
-            msg.setText("Hello World");
-
-            connection.start();
-            producer.send(msg);
-
-            producer.close();
-            session.close();
-            connection.close();
-        }
     }
 }
